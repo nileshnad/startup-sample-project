@@ -10,6 +10,7 @@ locals {
   read_principals  = get_env("AWS_ACCOUNTS_ECR_READ_ACCESS", "")
 }
 
+
 generate "tfvars" {
   path              = "terragrunt.${local.environment}.auto.tfvars"
   if_exists         = "overwrite"
